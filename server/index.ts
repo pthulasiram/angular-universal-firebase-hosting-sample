@@ -1,9 +1,9 @@
-import 'zone.js/dist/zone-node';
 import * as express from 'express';
 import { enableProdMode as enableProd } from '@angular/core';
 import { renderModuleFactory } from '@angular/platform-server';
 import * as fs from 'fs';
 import { Observable, Observer } from 'rxjs';
+import 'zone.js/dist/zone-node';
 
 export interface ServerConfiguration {
   main: string;

@@ -3,7 +3,7 @@
     "source": "dist-server"
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist-server/dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -11,7 +11,11 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/",
+        "function": "trigger"
+      },
+      {
+        "source": "/*",
         "function": "trigger"
       }
     ]

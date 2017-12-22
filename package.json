@@ -29,7 +29,7 @@
     "express": "^4.15.3",
     "firebase": "^3.6.6",
     "firebase-admin": "~5.2.1",
-    "firebase-functions": "^0.6.1",
+    "firebase-functions": "^0.7.3",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

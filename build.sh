@@ -1,13 +1,9 @@
-ng build --prod 
-ng build --prod --app 1
-cp dist/index.html dist-server/
+ng build --prod
+ng build --prod --app 1 --output-hashing=none
 node_modules/.bin/tsc -p server/tsconfig.json
-cp -R dist dist-server
-rm dist-server/dist/index.html
-mv dist-server/dist/main.* dist-server/dist/main.bundle.js
-mv dist-server/main.* dist-server/main.bundle.js
-sed -i '' 's/main.*/main.bundle.js\">\<\/script>\<\/body>\<\/html>\ /g' dist-server/index.html
+mv dist dist-server
+mv dist-server/dist/index.html dist-server/
 cp server/package.json dist-server
-# cd dist-server 
-# npm i
-# cd ..
+cd dist-server
+npm i
+cd ..

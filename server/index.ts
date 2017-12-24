@@ -4,5 +4,7 @@ export let trigger = angularUniversal.trigger({
   index: __dirname + '/index.html',
   main: __dirname + '/main.bundle',
   staticDirectory: __dirname + '/dist',
-  enableProdMode: true
+  enableProdMode: true,
+  cdnCacheExpiry: 1200,
+  browserCacheExpiry: 600
 });
